@@ -1,0 +1,25 @@
+body{
+    color: brown;
+}
+h2{
+    color:blueviolet;
+    background-color: lightcoral;
+    font-size: 40px;
+    font-family: fantasy;
+    font-style:italic;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: underline;
+}
+head{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 30 px;
+    text-align: center;
+    color: blue;
+    background-color: blueviolet;
+}
+.resaltar{
+    color: black;
+    background: local;
+    background-color: aquamarine;
+}
