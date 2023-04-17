@@ -1,0 +1,23 @@
+import csv
+import matplotlib.pyplot as plt
+
+def torta(url):
+    file = open(url, "r+")           # Abrimos el archivo
+    reader = csv.reader(file, delimiter = ",")    # Lo trabajamos como un csv
+    per = []
+    pais = []
+    for row in reader:
+        per.append(row[-1])
+        pais.append(row[2])
+    per.pop(0)
+    percen = list(map(lambda stri: float(stri), per))
+    pais.pop(0)   # Hemos quedado con una lista de paises y otra de los porcentajes
+    #print(pais)  
+    #print(percen)
+    lista = list(zip(per, pais))
+    print(lista)
+    plt.pie(percen, labels = pais)
+    plt.show()                          # Hemos hecho el pastel de todo
+        
+f = torta("./world_population.csv")   
+print(f)
